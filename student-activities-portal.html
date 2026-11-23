@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/student-activities-portal.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore university activities and register for upcoming student events.">
+  <title>Campus Connect | Student Activities</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #243447;
+      background: #f5f7fa;
+      font: 16px/1.55 Arial, sans-serif;
+    }
+
+    a {
+      color: #155987;
+    }
+
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #c68100;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      padding: 10px;
+      background: white;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+    }
+
+    header {
+      background: #17324d;
+      color: white;
+    }
+
+    .topbar,
+    nav,
+    main,
+    footer {
+      max-width: 1050px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .topbar {
+      padding-top: 16px;
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    nav {
+      padding-bottom: 16px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+    }
+
+    .hero {
+      background: #245b83;
+      color: white;
+      padding: 40px max(20px, calc((100% - 1010px) / 2));
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 650px;
+    }
+
+    main {
+      padding-top: 32px;
+      padding-bottom: 48px;
+    }
+
+    h2 {
+      color: #17324d;
+      margin-top: 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .events {
+      display: grid;
+      gap: 16px;
+    }
+
+    article,
+    aside {
+      background: white;
+      border: 1px solid #dce3ea;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 12px #17324d0b;
+    }
+
+    article h3 {
+      margin: 8px 0;
+      color: #17324d;
+    }
+
+    .date {
+      display: inline-block;
+      background: #fff2d3;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    article p {
+      margin: 8px 0;
+    }
+
+    .activity-box {
+      border-top: 5px solid #f2c66d;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label,
+    legend {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      margin-top: 4px;
+      padding: 10px;
+      border: 1px solid #8393a2;
+      border-radius: 6px;
+      font: inherit;
+      background: white;
+      color: #243447;
+    }
+
+    fieldset {
+      border: 1px solid #cbd5df;
+      border-radius: 7px;
+      padding: 10px 12px;
+    }
+
+    fieldset label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 6px 16px 4px 0;
+      font-weight: normal;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #245b83;
+    }
+
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      background: #17324d;
+      color: white;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #244f71;
+    }
+
+    #form-message {
+      margin: 0;
+      color: #175b38;
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #dce3ea;
+      padding-top: 16px;
+      padding-bottom: 24px;
+      color: #536577;
+    }
+
+    @media (max-width: 700px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="http://127.0.0.1:5500/student-activities-portal.html#main-content">Skip to main content</a>
+
+  <header>
+    <div class="topbar">
+      <div class="brand">Campus Connect</div>
+      <div>Student Activities Portal</div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="http://127.0.0.1:5500/student-activities-portal.html#events">Upcoming events</a>
+      <a href="http://127.0.0.1:5500/student-activities-portal.html#activities">Activities</a>
+      <a href="http://127.0.0.1:5500/student-activities-portal.html#registration">Register</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <h1 id="page-title">Find your campus community</h1>
+    <p>Discover events, try something new, and meet students who share your interests.</p>
+  </section>
+
+  <main id="main-content">
+    <div class="layout">
+      <section id="events" aria-labelledby="events-title">
+        <h2 id="events-title">Upcoming events</h2>
+
+        <div class="events">
+          <article>
+            <span class="date">
+              <time datetime="2026-12-03">December 3</time>
+            </span>
+            <h3>Welcome Week Social</h3>
+            <p>Meet new people over snacks, music, and easy icebreaker games.</p>
+            <p><strong>Time:</strong> 4:00–6:00 PM ·
+              <strong>Place:</strong> Student Union, Room 101</p>
+          </article>
+
+          <article>
+            <span class="date">
+              <time datetime="2026-12-06">December 6</time>
+            </span>
+            <h3>Campus Garden Day</h3>
+            <p>Help plant herbs and flowers in the student garden. Tools are provided.</p>
+            <p><strong>Time:</strong> 10:00 AM–12:00 PM ·
+              <strong>Place:</strong> East Garden</p>
+          </article>
+
+          <article>
+            <span class="date">
+              <time datetime="2026-12-10">December 10</time>
+            </span>
+            <h3>Open Mic Night</h3>
+            <p>Enjoy student music, poetry, and comedy—or sign up for a short performance.</p>
+            <p><strong>Time:</strong> 6:30–8:30 PM ·
+              <strong>Place:</strong> Arts Hall Café</p>
+          </article>
+        </div>
+      </section>
+
+      <aside id="activities" class="activity-box" aria-labelledby="activities-title">
+        <h2 id="activities-title">Explore activities</h2>
+        <p>There is a place for everyone on campus. Start with a group that interests you:</p>
+        <ul>
+          <li>Arts and music</li>
+          <li>Sports and recreation</li>
+          <li>Volunteering</li>
+          <li>Culture and language</li>
+          <li>Technology and gaming</li>
+        </ul>
+        <p>Register for an event to meet the organizers and learn more.</p>
+      </aside>
+
+      <section id="registration" aria-labelledby="registration-title">
+        <aside class="activity-box">
+          <h2 id="registration-title">Student event registration</h2>
+
+          <form id="registration-form">
+            <div>
+              <label for="student-name">Your name</label>
+              <input id="student-name" name="student-name" type="text" autocomplete="name" required="">
+            </div>
+
+            <div>
+              <label for="student-email">University email</label>
+              <input id="student-email" name="student-email" type="email" autocomplete="email" required="">
+            </div>
+
+            <div>
+              <label for="event-choice">Choose an event</label>
+              <select id="event-choice" name="event-choice" required="">
+                <option value="">Select an event</option>
+                <option>Welcome Week Social</option>
+                <option>Campus Garden Day</option>
+                <option>Open Mic Night</option>
+              </select>
+            </div>
+
+            <fieldset>
+              <legend>Have you attended a campus event before?</legend>
+              <label>
+                <input type="radio" name="attended" value="yes" required="">
+                Yes
+              </label>
+              <label>
+                <input type="radio" name="attended" value="no">
+                No
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Would you like event updates?</legend>
+              <label>
+                <input type="checkbox" name="updates" value="email">
+                Email me about future activities
+              </label>
+            </fieldset>
+
+            <div>
+              <label for="notes">Anything organizers should know? (optional)</label>
+              <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+
+            <button type="submit">Register for event</button>
+            <p id="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Campus Connect · Student Life Office</p>
+  </footer>
+
+  <script>
+    document.getElementById("registration-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const eventName = document.getElementById("event-choice").value;
+      document.getElementById("form-message").textContent =
+        "Thanks! Your interest in " + eventName + " has been recorded for this example.";
+
+      this.reset();
+    });
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
